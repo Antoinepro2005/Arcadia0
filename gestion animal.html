@@ -1,0 +1,37 @@
+form id="animal-form">
+<h2>Gestion des Animaux</h2>
+
+<label for="animal-name">Nom de l'animal :</label>
+<input type="text" id="animal-name" required>
+
+<label for="animal-species">Espèce :</label>
+<input type="text" id="animal-species" required>
+
+<label for="habitat">Habitat :</label>
+<select id="habitat">
+    <!-- Options dynamiques remplies par les habitats existants -->
+</select>
+
+<button type="submit">Enregistrer l'animal</button>
+</form>
+
+<form id="filter-reports-form">
+    <label for="animal">Filtrer par animal :</label>
+    <select id="animal">
+        <!-- Options des animaux dynamiques -->
+    </select>
+
+    <label for="date-range">Filtrer par date :</label>
+    <input type="date" id="date-start">
+    <input type="date" id="date-end">
+
+    <button type="submit">Appliquer les filtres</button>
+</form>
+
+<div id="report-list">
+    <!-- Affichage dynamique des comptes rendus -->
+</div>
+
+<canvas id="consultations-chart"></canvas>
+
+<script> </script>

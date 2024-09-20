@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de l'Animal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="{{ url_for('static', filename='return.png') }}" alt="Retour"></a>
+        <div>
+            <a href="connexion.html">Connexion</a>
+            <a href="service.html">Services</a>
+            <a href="habitat.html">Habitats</a>
+            <a href="#contacts">Contact</a>
+        </div>
+    </div>
+
+    <h2>{{ animal.first_name }}</h2>
+    <img src="{{ animal.image }}" alt="{{ animal.first_name }}">
+    <p>Race : {{ animal.race }}</p>
+    <p>État : {{ animal.health_status }}</p>
+    <p>Nourriture : {{ animal.food }} ({{ animal.food_weight }}g)</p>
+    <p>Date de passage du vétérinaire : {{ animal.last_checkup }}</p>
+    <p>Détails de l'état : {{ animal.health_details }}</p>
+
+</body>
+
+</html>

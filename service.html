@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu du Zoo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4a7023;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            animation: float 1s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            background-color: #ffffff;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        .services {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .service-item {
+            margin-bottom: 20px;
+        }
+
+        .service-item h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .service-item p {
+            margin: 0;
+        }
+
+        .service-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="return.png" alt="Retour"></a>
+        <div>
+            <a href="connexion.html">Connexion</a>
+            <a href="service.html">Services</a>
+            <a href="habitat.html">Habitats</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Bienvenue au Zoo Arcadia</h1>
+        <img src="zoo_image.jpg" alt="Image du Zoo">
+    </div>
+
+    <div id="services" class="services">
+        <h2>Nos Services</h2>
+
+        <div class="service-item">
+            <h3>Restauration</h3>
+            <p>Profitez de notre large sélection de restaurants et de stands de nourriture, adaptés à tous les goûts.
+            </p>
+            <img src="restaurant.jpg" alt="Image de la restauration">
+        </div>
+
+        <div class="service-item">
+            <h3>Visite des habitats avec guide (gratuit)</h3>
+            <p>Explorez les habitats des animaux avec un guide expérimenté qui vous fournira des informations
+                fascinantes.</p>
+            <img src="guide.jpg" alt="Image de la visite guidée">
+        </div>
+
+        <div class="service-item">
+            <h3>Visite du zoo au petit train</h3>
+            <p>Montez à bord de notre petit train pour une visite agréable et relaxante du zoo.</p>
+            <img src="petit train.jpg" alt="Image du petit train">
+        </div>
+        <!-- Ajouter d'autres services ici -->
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <p>Rejoignez-nous sur nos réseaux</p>
+            <a href="https://www.tiktok.com" class="social-icon"><img src="Tiktok-logo.png" alt="TikTok"></a>
+            <a href="https://www.twitter.com" class="social-icon"><img src="tweeter-logo.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com" class="social-icon"><img src="instagram-logo.png" alt="Instagram"></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

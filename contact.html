@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez le Zoo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4a7023;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 500px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            display: block;
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4a7023;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #365819;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        .success-message {
+            color: green;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Menu de navigation -->
+        <a href="index.html">Accueil</a>
+        <a href="habitats.html">Habitats</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="content">
+        <div class="contact-form">
+            <h2>Contactez le Zoo</h2>
+            <!-- Affichage des messages de succès ou d'erreur -->
+            <?php if (!empty($success_message)): ?>
+            <p class="success-message">
+                <?php echo $success_message; ?>
+            </p>
+            <?php elseif (!empty($error_message)): ?>
+            <p class="error-message">
+                <?php echo $error_message; ?>
+            </p>
+            <?php endif; ?>
+            <form action="contact.php" method="post">
+                <input type="text" name="title" placeholder="Titre" required>
+                <textarea name="description" rows="4" placeholder="Description" required></textarea>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

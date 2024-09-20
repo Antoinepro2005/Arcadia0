@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de commentaires du zoo</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <nav>
+                <a href="service.html">Service</a>
+                <a href="habitat.html">Habitats</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <div class="comment-section">
+                <h2>Création d'un Pseudo</h2>
+                <input type="text" id="pseudo" placeholder="Entrez votre pseudo" />
+                <button onclick="savePseudo()">Enregistrer le Pseudo</button>
+
+                <h2>Mettez votre avis ici:</h2>
+                <div class="rating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <textarea id="commentText" placeholder="Votre commentaire..."></textarea>
+                <button onclick="addComment()">Envoyer</button>
+
+                <button onclick="sortCommentsByRating()">Trier par étoile</button>
+            </div>
+
+            <div class="comments-display">
+                <h2>Commentaires:</h2>
+                <div id="comments">
+                    <!-- Les commentaires prédéfinis -->
+                    <div class="comment">
+                        <div class="comment-rating">★★★★★</div>
+                        <p><strong>Guillaume:</strong> Les animaux du zoo Arcadia sont fantastiques! Les enclos sont
+                            spacieux et bien entretenus. Un endroit idéal pour passer du temps avec la famille. Je
+                            recommande vivement!</p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-rating">★★★☆☆</div>
+                        <p><strong>Martine:</strong> Très déçue par le zoo Arcadia. Les enclos sont propres, mais
+                            certains animaux semblaient stressés. Pas idéal pour les enfants.</p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-rating">★★★★☆</div>
+                        <p><strong>Albertus:</strong> Déception mise à part pour Arcadia, les enclos étaient convenables
+                            mais l'expérience était légèrement gâchée par le nombre de visiteurs. À voir hors saison.
+                        </p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-rating">★★★★★</div>
+                        <p><strong>Jenny:</strong> J'adore Arcadia! Les animaux sont bien traités et le personnel est
+                            très accueillant. Un excellent endroit pour emmener les enfants!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="images-section">
+                <img src="tigre.png" alt="Tigre">
+                <img src="elephant.png" alt="Éléphant">
+                <img src="pandaroux.jpg" alt="Panda Roux">
+                <img src="girafe.png" alt="Girafe">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <p>Rejoignez-nous sur nos réseaux</p>
+            <a href="#" class="social-icon"><img src="Tiktok-logo.png" alt="TikTok"></a>
+            <a href="#" class="social-icon"><img src="tweeter-logo.png" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="instagram-logo.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

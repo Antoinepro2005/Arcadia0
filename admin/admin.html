@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="create_user.php" method="POST">
+        <label for="username">Courriel (nom d'utilisateur) :</label>
+        <input type="email" id="username" name="username" required><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="role">Type de compte :</label>
+        <select id="role" name="role">
+            <option value="1">Employé</option>
+            <option value="2">Vétérinaire</option>
+        </select><br>
+
+        <input type="submit" value="Créer le compte">
+    </form>
+
+
+    <form action="search_reports.php" method="GET">
+        <label for="animal">Animal :</label>
+        <select id="animal" name="animal">
+            <!-- Options dynamiques à partir de la base de données -->
+        </select>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date">
+
+        <input type="submit" value="Filtrer">
+    </form>
+
+
+</body>
+
+</html>
